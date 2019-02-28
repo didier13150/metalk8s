@@ -81,6 +81,10 @@ ALL = \
 	$(ISO_ROOT)/salt/metalk8s/kubeadm/init/addons/dependencies.sls \
 	$(ISO_ROOT)/salt/metalk8s/kubeadm/init/addons/kube-proxy.sls \
 	\
+	$(ISO_ROOT)/salt/metalk8s/kubeadm/init/addon/coredns/configs/deployment.yaml \
+	$(ISO_ROOT)/salt/metalk8s/kubeadm/init/addon/coredns/init.sls \
+	$(ISO_ROOT)/salt/metalk8s/kubeadm/init/addon/installed.sls \
+	\
 	$(ISO_ROOT)/salt/metalk8s/kubelet/init.sls \
 	$(ISO_ROOT)/salt/metalk8s/kubelet/installed.sls \
 	\
