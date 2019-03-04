@@ -3,6 +3,9 @@
 {% set kubeconfig = "/etc/kubernetes/admin.conf" %}
 {% set context = "kubernetes-admin@kubernetes" %}
 
+include:
+  - .dependencies
+
 Create coredns ConfigMap:
   kubernetes.configmap_present:
     - name: coredns
@@ -35,7 +38,7 @@ Create coredns deployment:
     - namespace: kube-system
     - kubeconfig: {{ kubeconfig }}
     - context: {{ context }}
-    - source: salt://metalk8s/kubeadm/init/addon/coredns/configs/deployment.yaml
+    - source: salt://metalk8s/kubeadm/init/addons/files/coredns_deployment.yaml
   require:
     - kubernetes: Create coredns ConfigMap
     - pkg: Install Python Kubernetes client
