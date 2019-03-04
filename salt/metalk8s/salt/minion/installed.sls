@@ -1,4 +1,4 @@
-{% set salt_minion_version = '2018.3.3'%}
+{% set salt_minion_version = '2019.2.0'%}
 include :
   - metalk8s.repo
 
